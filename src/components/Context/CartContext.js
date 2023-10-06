@@ -33,7 +33,7 @@ export const CartProvider = ({ children }) => {
   };
 
   const vaciarCarrito = () => {
-    setCart([]); // Esto limpia el carrito
+    setCart([]); 
     localStorage.removeItem("cart");
   };
 
@@ -48,7 +48,7 @@ export const CartProvider = ({ children }) => {
         addToCart,
         quantityOnCart,
         precioTotal,
-        vaciarCarrito, // Asegúrate de incluir la función vaciarCarrito aquí
+        vaciarCarrito, 
       }}
     >
       {children}

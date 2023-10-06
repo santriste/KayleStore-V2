@@ -7,14 +7,14 @@ const ItemCount = ({ stock, initial = 1, handleRestar, handleSumar, handleAgrega
   const incrementar = () => {
     if (cantidad < stock) {
       setCantidad(cantidad + 1);
-      handleSumar(); // Llama a la función handleSumar
+      handleSumar(); 
     }
   };
 
   const decrementar = () => {
     if (cantidad > 1) {
       setCantidad(cantidad - 1);
-      handleRestar(); // Llama a la función handleRestar
+      handleRestar(); 
     }
   };
 

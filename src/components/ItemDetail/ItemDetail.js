@@ -33,7 +33,7 @@ const ItemDetail = ({ nombre, rutaImagen, descripcion, precio, stock }) => {
           handleRestar={handleRestar}
           handleSumar={handleSumar}
           handleAgregar={() => {
-            addToCart(nombre, cantidad, precio); // Agregamos el precio
+            addToCart(nombre, cantidad, precio); 
           }}
           stock={stock}
         />

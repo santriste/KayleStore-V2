@@ -1,3 +1,4 @@
+/*
 const products = [
     {
       id: '53600',
@@ -106,4 +107,4 @@ const products = [
             resolve(products.filter (prod => prod.categoria === productCat))
         }, 500)
     })
-  }
+  }  */
