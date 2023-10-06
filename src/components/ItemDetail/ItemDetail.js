@@ -3,11 +3,10 @@ import ItemCount from '../ItemCount/ItemCount';
 import './ItemDetail.css';
 import { CartContext } from '../Context/CartContext';
 
-const ItemDetail = ( {nombre, rutaImagen, descripcion, precio, stock }) => {
-
+const ItemDetail = ({ nombre, rutaImagen, descripcion, precio, stock }) => {
   const { cart, addToCart } = useContext(CartContext);
   console.log(cart);
-  
+
   const [cantidad, setCantidad] = useState(1);
 
   const handleRestar = () => {
@@ -22,8 +21,6 @@ const ItemDetail = ( {nombre, rutaImagen, descripcion, precio, stock }) => {
     }
   };
 
-
-
   return (
     <section className="DetalleProducto">
       <img src={rutaImagen} className="d-block" alt={nombre} />
@@ -35,7 +32,9 @@ const ItemDetail = ( {nombre, rutaImagen, descripcion, precio, stock }) => {
           cantidad={cantidad}
           handleRestar={handleRestar}
           handleSumar={handleSumar}
-          handleAgregar={() => { addToCart(nombre, cantidad) }}
+          handleAgregar={() => {
+            addToCart(nombre, cantidad, precio); // Agregamos el precio
+          }}
           stock={stock}
         />
       </div>
